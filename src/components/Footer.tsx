@@ -4,6 +4,8 @@ import { AiOutlineTwitter,AiFillYoutube,AiOutlineInstagram } from 'react-icons/a
 interface footerprops{}
 
 const Footer:FC<footerprops> = () => {
+  const date = new Date();
+  const year = date.getFullYear();
   return (
     <div className='bg-black text-white w-full h-80 px-52  '>
         <div className='flex items-center justify-between py-5 '>
@@ -62,7 +64,7 @@ const Footer:FC<footerprops> = () => {
         </div>
         <div className='px-16 pt-10 flex items-center justify-between '>
           <div className='text-xs text-gray-500 flex gap-4 '>
-          <span> Copyright @ 2023 Netflix clone</span> 
+          <span> Copyright &copy; {year} Netflix clone</span> 
           <span>All rights reserved</span>
           </div>
           <div className='text-xs text-gray-500 flex gap-4 '>
