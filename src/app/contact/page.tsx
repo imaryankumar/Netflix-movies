@@ -20,7 +20,7 @@ const Contact:FC<contactprops> = () => {
     </div>
     <div className='py-10 text-center flex flex-col items-center justify-center '>
        <div>
-        <h1 className='text-2xl font-bold'>We'd love to hear <span className='text-red-500'>from you</span> </h1>
+        <h1 className='text-2xl font-bold'>We&rsquo;d love to hear <span className='text-red-500'>from you</span> </h1>
        </div>
        <ContactForm />
     </div>

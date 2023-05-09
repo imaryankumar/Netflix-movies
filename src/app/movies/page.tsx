@@ -1,7 +1,6 @@
 "use client"
 import Card from '@/components/Card';
 import  {useEffect, useState } from 'react'
-interface movieprops{}
 interface apiprops{
   Title:string ;
   Year:number;
@@ -10,12 +9,12 @@ interface apiprops{
 
 }
 
-const Movies:movieprops = async() => {
+const Movies = async() => {
   
  const [moviedata,setMovieData]=useState<apiprops[]>([]);
    useEffect(()=>{
    try{
-    fetch('https://my-json-server.typicode.com/horizon-code-academy/fake-movies-api/movies',{ cache: 'no-store' })
+    fetch('https://my-json-server.typicode.com/horizon-code-academy/fake-movies-api/movies')
     .then(response => response.json())
     .then(json => setMovieData(json)).catch(err=>console.log(err));
    }catch(err){
