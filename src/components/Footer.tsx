@@ -1,6 +1,7 @@
-import React from 'react'
+import { FC } from 'react'
+interface footerprops{}
 
-const Footer = () => {
+const Footer:FC<footerprops> = () => {
   return (
     <div>
         This is Footer

@@ -2,6 +2,7 @@ import Navbar from '@/components/Navbar'
 import './globals.css'
 import Footer from '@/components/Footer'
 import { Mulish } from 'next/font/google';
+import Head from 'next/head';
  
 const mulish:any = Mulish({
   weight: '400',

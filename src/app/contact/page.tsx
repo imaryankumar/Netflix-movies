@@ -1,6 +1,6 @@
-import React from 'react'
-
-const Contact = () => {
+import { FC } from 'react'
+interface contactprops{}
+const Contact:FC<contactprops> = () => {
   return (
     <div>Contact</div>
   )
