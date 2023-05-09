@@ -1,10 +1,10 @@
-import React from 'react'
-
+import  { FC } from 'react'
 interface titleProps{
     titles:string
     images:any
 }
-const Herosection = ({titles,images}:titleProps) => {
+
+const Herosection:FC<titleProps> = ({titles,images}) => {
   return (
     <div className='h-[30rem] bg-gradient-to-r from-purple-500 to-pink-400 flex items-center justify-between px-24'>
         <div className='px-28 flex flex-col gap-5 items-start '>

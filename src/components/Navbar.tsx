@@ -1,8 +1,9 @@
 import Link from 'next/link'
-import React from 'react'
+import { FC } from 'react'
 import { SiNetflix } from 'react-icons/si';
+interface navbarprops{}
 
-const Navbar = () => {
+const Navbar:FC<navbarprops> = () => {
   return (
     <nav className='w-full h-14 bg-white shadow  flex items-center text-center justify-between px-16 '>
       <div>
