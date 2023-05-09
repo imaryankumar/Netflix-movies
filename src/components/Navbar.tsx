@@ -12,10 +12,10 @@ const Navbar:FC<navbarprops> = () => {
           </Link>
       </div>
       <nav className='flex items-center justify-center list-none gap-5 '>
-           <li><Link href="/">Home</Link></li>
-           <li><Link href="/about">About</Link></li>
-           <li><Link href="/movies">Movie</Link></li>
-           <li><Link href="/contact">Contact</Link></li>
+           <li className='hover:text-red-500'><Link href="/">Home</Link></li>
+           <li className='hover:text-red-500'><Link href="/about">About</Link></li>
+           <li className='hover:text-red-500'><Link href="/movies">Movie</Link></li>
+           <li className='hover:text-red-500'><Link href="/contact">Contact</Link></li>
       </nav>
     </nav>
   )

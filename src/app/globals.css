@@ -40,3 +40,10 @@
         transform: rotate(1800deg);
     }
 }
+.icons_color{
+  padding: 6px 8px;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
