@@ -1,5 +1,6 @@
 import React, { FC } from 'react'
 import {useRouter} from 'next/navigation'
+import Image from 'next/image';
 interface cardprops{
     title:string;
     poster:any;
@@ -17,7 +18,7 @@ const Card:FC<cardprops> = ({title,poster,year}) => {
   return (
     <div className='w-80 h-96 shadow text-left  '>
   
-   <img src={poster} alt="poster" className='w-80 h-36' />
+   <Image src={poster} alt="poster" className='w-80 h-36' />
     <p>hello Everyone how rae yout this is the best part to show</p>
    <h1>{title}</h1>
    <p>{year}</p>
