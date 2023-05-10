@@ -12,7 +12,7 @@ const About: FC<aboutprops> = () => {
             xmlns="http://www.w3.org/2000/svg"
             data-name="Layer 1"
             viewBox="0 0 766 663.78"
-            className="md:w-80 md:h-80 w-64 h-64 "
+            className="md:w-80 md:h-80 w-56 h-56 "
             
           >
             <path
