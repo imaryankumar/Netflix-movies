@@ -9,7 +9,7 @@ interface titleProps{
 const Herosection:FC<titleProps> = ({titles,images}) => {
   const router=useRouter();
   return (
-    <div className='h-[30rem] bg-gradient-to-r from-purple-500 to-pink-400 block md:flex items-center justify-between px-1 md:px-24'>
+    <div className='h-[30rem] bg-gradient-to-r from-purple-500 to-pink-400 block md:flex items-center justify-between px-1 md:px-24 rounded-b-3xl  '>
         <div className='md:px-28 px-16 flex flex-col md:gap-5 gap-1 py-2 items-start '>
      <h1 className=" font-black md:text-5xl text-2xl uppercase  ">{titles}</h1>
      <p className=' text-xs md:text-base font-thin pb-2 md:pb-4 '>Lorem, ipsum dolor to the full name of sed laborum reprehenderit minus enim molestias numquam asperiores 

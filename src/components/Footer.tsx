@@ -13,7 +13,7 @@ const Footer:FC<footerprops> = () => {
     <div className='bg-black text-white w-full h-full md:h-80 md:px-52 px-4  '>
         <div className='flex items-center justify-between py-5 '>
           <h1 className='text-xl font-extrabold cursor-pointer ' onClick={()=>router.push('/')} >Netflix Clone</h1>
-          <div className='flex md:gap-5 gap-3 '>
+          <div className='flex md:gap-5 gap-2 '>
             <span className='bg-blue-500 icons_color '><FaFacebookF/></span>
             <span className='bg-blue-400 icons_color  '><AiOutlineTwitter /></span>
             <span className='bg-pink-500 icons_color  '><AiOutlineInstagram /></span>
