@@ -1,19 +1,22 @@
+"use client";
+import { useRouter } from 'next/navigation';
 import { FC } from 'react'
 import { FaLinkedinIn,FaFacebookF } from 'react-icons/fa';
 import { AiOutlineTwitter,AiFillYoutube,AiOutlineInstagram } from 'react-icons/ai';
 interface footerprops{}
 
 const Footer:FC<footerprops> = () => {
+  const router=useRouter();
   const date = new Date();
   const year = date.getFullYear();
   return (
     <div className='bg-black text-white w-full h-full md:h-80 md:px-52 px-4  '>
         <div className='flex items-center justify-between py-5 '>
-          <h1 className='text-xl font-extrabold '>Netflix Clone</h1>
+          <h1 className='text-xl font-extrabold cursor-pointer ' onClick={()=>router.push('/')} >Netflix Clone</h1>
           <div className='flex md:gap-5 gap-3 '>
             <span className='bg-blue-500 icons_color '><FaFacebookF/></span>
-            <span className='bg-blue-400 icons_color '><AiOutlineTwitter /></span>
-            <span className='bg-pink-500 icons_color '><AiOutlineInstagram /></span>
+            <span className='bg-blue-400 icons_color  '><AiOutlineTwitter /></span>
+            <span className='bg-pink-500 icons_color  '><AiOutlineInstagram /></span>
             <span className='bg-blue-700 icons_color '><FaLinkedinIn /></span>
             <span className='bg-red-600 icons_color '><AiFillYoutube /></span>
           </div>
@@ -21,10 +24,10 @@ const Footer:FC<footerprops> = () => {
         <div className='md:py-5 py-2 flex flex-wrap items-center justify-center gap-10 md:gap-2 md:justify-between '>
           <div className='flex flex-col gap-1 '>
             <h1 className='text-xl font-extrabold '>Company</h1>
-            <h3 className='text-gray-400 cursor-pointer'>Home</h3>
-            <h3 className='text-gray-400 cursor-pointer'>Contact us</h3>
-            <h3 className='text-gray-400 cursor-pointer'>About us</h3>
-            <h3 className='text-gray-400 cursor-pointer'>Get started</h3>
+            <h3 className='text-gray-400 cursor-pointer' onClick={()=>router.push('/')} >Home</h3>
+            <h3 className='text-gray-400 cursor-pointer' onClick={()=>router.push('/contact')}>Contact us</h3>
+            <h3 className='text-gray-400 cursor-pointer' onClick={()=>router.push('/about')}>About us</h3>
+            <h3 className='text-gray-400 cursor-pointer' onClick={()=>router.push('/movies')}>Get started</h3>
           </div>
           <div>
           <div className='flex flex-col gap-1 '>
