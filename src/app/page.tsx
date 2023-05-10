@@ -10,9 +10,9 @@ const Home = () => {
           <svg
             xmlns="http://www.w3.org/2000/svg"
             data-name="Layer 1"
-            width="366.25325"
-            height="363.94329"
+          
             viewBox="0 0 1004.25325 711.94329"
+            className="md:h-80 md:w-80 w-64 h-64 "
           >
             <title>netflix</title>
             <rect

@@ -7,10 +7,10 @@ const Footer:FC<footerprops> = () => {
   const date = new Date();
   const year = date.getFullYear();
   return (
-    <div className='bg-black text-white w-full h-80 px-52  '>
+    <div className='bg-black text-white w-full h-full md:h-80 md:px-52 px-4  '>
         <div className='flex items-center justify-between py-5 '>
           <h1 className='text-xl font-extrabold '>Netflix Clone</h1>
-          <div className='flex gap-5  '>
+          <div className='flex md:gap-5 gap-3 '>
             <span className='bg-blue-500 icons_color '><FaFacebookF/></span>
             <span className='bg-blue-400 icons_color '><AiOutlineTwitter /></span>
             <span className='bg-pink-500 icons_color '><AiOutlineInstagram /></span>
@@ -18,7 +18,7 @@ const Footer:FC<footerprops> = () => {
             <span className='bg-red-600 icons_color '><AiFillYoutube /></span>
           </div>
         </div>
-        <div className='py-5 flex items-center justify-between '>
+        <div className='md:py-5 py-2 flex flex-wrap items-center justify-center gap-10 md:gap-2 md:justify-between '>
           <div className='flex flex-col gap-1 '>
             <h1 className='text-xl font-extrabold '>Company</h1>
             <h3 className='text-gray-400 cursor-pointer'>Home</h3>
@@ -62,8 +62,8 @@ const Footer:FC<footerprops> = () => {
           </div>
           </div>
         </div>
-        <div className='px-16 pt-10 flex items-center justify-between '>
-          <div className='text-xs text-gray-500 flex gap-4 '>
+        <div className=' px-1 md:px-16 md:pt-10 pt-2 flex flex-wrap items-center justify-center md:justify-between py-1  '>
+          <div className='text-xs text-gray-500 flex gap-2 md:gap-4 '>
           <span> Copyright &copy; {year} Netflix clone</span> 
           <span>All rights reserved</span>
           </div>

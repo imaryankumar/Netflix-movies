@@ -10,17 +10,17 @@ interface contactprops{}
 const Contact:FC<contactprops> = () => {
   return (
     <>
-    <div className='py-10 text-center'>
+    <div className='py-5 text-center'>
       <h1 className='text-3xl font-extrabold'>Contact Us</h1>
     </div>
-    <div className='flex items-center justify-center px-16 gap-5 '>
+    <div className='md:flex  items-center justify-between md:justify-center px-4 md:px-16 gap-5  '>
     <ContactCard icons={<AiTwotoneMail />}  title='Email' para1='Monday to Friday Expected' para2=' Response time 72 hours Send Email ' btn='Send Email'  />
-    <ContactCard icons={<RiVideoChatFill />}  title='Live Chat' para1=' Weekdays: 9 AM - 6 PM ET ' para2=' Weekends: 9 AM - 5 PM ET ' btn='Chat Now' />
+    <ContactCard icons={<RiVideoChatFill />}  title='Live Chat' para1=' Weekdays: 9AM - 6PM ET ' para2=' Weekends: 9AM - 5PM ET ' btn='Chat Now' />
     <ContactCard icons={<IoMdChatbubbles />}  title='Community Forum' para1='Monday to Friday Expected' para2=' Response time 72 hours Send Email ' btn='Ask The Community' />
     </div>
     <div className='py-10 text-center flex flex-col items-center justify-center '>
        <div>
-        <h1 className='text-2xl font-bold'>We&rsquo;d love to hear <span className='text-red-500'>from you</span> </h1>
+        <h1 className=' text-xl md:text-2xl font-bold'>We&rsquo;d love to hear <span className='text-red-500'>from you</span> </h1>
        </div>
        <ContactForm />
     </div>

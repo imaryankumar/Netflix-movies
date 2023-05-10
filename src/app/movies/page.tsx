@@ -22,8 +22,8 @@ const Movies = async() => {
    }
   },[])
   return (
-    <div className='px-28 pb-16 '> 
-     <h1 className='text-center py-8 text-4xl font-extrabold '>Series and Movies</h1>
+    <div className=' px-6 md:px-28 pb-16 '> 
+     <h1 className='text-center py-8 text-2xl md:text-4xl font-extrabold '>Series and Movies</h1>
     <div className='flex items-center text-center flex-1 justify-start  flex-wrap gap-10'>
     {
     moviedata.map((movies)=>{
