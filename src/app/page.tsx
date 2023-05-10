@@ -12,7 +12,7 @@ const Home = () => {
             data-name="Layer 1"
           
             viewBox="0 0 1004.25325 711.94329"
-            className="md:h-80 md:w-80 w-64 h-64 "
+            className="md:h-80 md:w-80 w-44 h-44 "
           >
             <title>netflix</title>
             <rect
