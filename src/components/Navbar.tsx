@@ -1,5 +1,4 @@
 "use client";
-import { signIn, signOut } from "next-auth/react";
 import Link from "next/link";
 import { FC, useState } from "react";
 import { SiNetflix } from "react-icons/si";
@@ -170,12 +169,12 @@ const Navbar: FC<navbarprops> = () => {
                    </div>
                    <div className="flex flex-col text-left py-2 px-4 gap-1 mt-auto ">
                       <button className="border bg-blue-500 rounded py-2 text-white flex items-center justify-center gap-5 ">
-                       <FcGoogle className="text-2xl bg-white rounded " onClick={()=>signIn()} /> Sign in with Google
+                       <FcGoogle className="text-2xl bg-white rounded "  /> Sign in with Google
                       </button>
                     </div>
                     <div className="flex flex-col text-left py-2 px-4 gap-1 mt-auto ">
                       <button className="border bg-black rounded py-2 text-white flex items-center justify-center gap-5 ">
-                       <SiGithub className="text-2xl rounded "  onClick={()=>signIn}/> Sign in with Github
+                       <SiGithub className="text-2xl rounded "  /> Sign in with Github
                       </button>
                     </div>
                     <div className="flex items-center justify-center flex-col py-5 gap-2 ">
@@ -246,12 +245,12 @@ const Navbar: FC<navbarprops> = () => {
                    </div>
                    <div className="flex flex-col text-left py-2 px-4 gap-1 mt-auto ">
                       <button className="border bg-blue-500 rounded py-2 text-white flex items-center justify-center gap-5 ">
-                       <FcGoogle className="text-2xl bg-white rounded " onClick={()=>signIn} /> Sign in with Google
+                       <FcGoogle className="text-2xl bg-white rounded " /> Sign in with Google
                       </button>
                     </div>
                     <div className="flex flex-col text-left py-2 px-4 gap-1 mt-auto ">
                       <button className="border bg-black rounded py-2 text-white flex items-center justify-center gap-5 ">
-                       <SiGithub className="text-2xl rounded " onClick={()=>signIn} /> Sign in with Github
+                       <SiGithub className="text-2xl rounded "  /> Sign in with Github
                       </button>
                     </div>
                     <div className="flex items-center justify-center flex-col py-2 gap-2 ">
