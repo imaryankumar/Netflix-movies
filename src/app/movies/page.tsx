@@ -1,5 +1,7 @@
 "use client"
 import Card from '@/components/Card';
+import { useSession } from 'next-auth/react';
+import { useRouter } from 'next/navigation';
 
 const fetchData = async()=>{
   const response= await fetch('https://my-json-server.typicode.com/horizon-code-academy/fake-movies-api/movies',{cache:'force-cache'});
@@ -7,6 +9,13 @@ const fetchData = async()=>{
 }
 
 const Movies = async() => {
+ 
+  const router = useRouter()
+  const {status} = useSession();
+  if(status === 'unauthenticated'){
+    router.push('/')
+  }
+
   const moviedata= await fetchData();
   return (
     <div className=' px-6 md:px-28 pb-16 '> 
