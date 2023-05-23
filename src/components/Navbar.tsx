@@ -6,7 +6,6 @@ import { HiOutlineBars4 } from "react-icons/hi2";
 import { RxCross2 } from "react-icons/rx";
 import { FcGoogle } from "react-icons/fc";
 import { SiGithub } from "react-icons/si";
-import { signIn, signOut, useSession } from "next-auth/react";
 interface navbarprops {}
 
 const Navbar: FC<navbarprops> = () => {
@@ -18,7 +17,7 @@ const Navbar: FC<navbarprops> = () => {
   const [password, setPassword] = useState("");
   const [logoutToggle, setLogoutToggle] = useState(false);
 
-  const { data: session } = useSession();
+  
 
   const onModalHandler = () => {
     isModalOpen === true ? setIsModalOpen(false) : setIsModalOpen(true);
@@ -53,37 +52,14 @@ const Navbar: FC<navbarprops> = () => {
             <Link href="/contact">Contact</Link>
           </li>
 
-          {session ? (
-            <div className="flex gap-5 ">
-              <span
-                className=" px-4 cursor-pointer py-2 rounded-full bg-red-400 text-white "
-                onClick={() => setLogoutToggle(!logoutToggle)}
-              >
-                {session.user?.name?.slice(0, 1)}
-              </span>
-              {logoutToggle && (
-                <div className="absolute  top-0 my-[58px] right-1 block">
-                  <div className="w-full h-full shadow-md bg-white flex flex-col items-center text-xs gap-5 justify-center  p-4 rounded  ">
-                    <span>{session.user?.name}</span>
-                    <span>{session.user?.email}</span>
-                    <button
-                      className="border bg-black text-white border-gray-500 hover:bg-white hover:text-black px-5 py-2 uppercase rounded "
-                      onClick={() => signOut()}
-                    >
-                      Sign out
-                    </button>
-                  </div>
-                </div>
-              )}
-            </div>
-          ) : (
+          
             <button
               className="border bg-black text-white ml-5 border-gray-500 hover:bg-white hover:text-black px-4 py-1 uppercase rounded "
               onClick={onModalHandler}
             >
               Sign in
             </button>
-          )}
+          
         </nav>
         <div className="flex md:hidden items-center justify-center gap-5 ">
           <span className="hover:text-red-500 text-center ">
@@ -330,9 +306,7 @@ const Navbar: FC<navbarprops> = () => {
                       <div className="flex flex-col text-left py-2 px-4 gap-1 mt-auto ">
                         <button
                           className="border bg-blue-500 rounded py-2 text-white flex items-center justify-center gap-5 "
-                          onClick={() => {
-                            signIn("google");
-                          }}
+                        
                         >
                           <FcGoogle className="text-2xl bg-white rounded " />{" "}
                           Sign in with Google
@@ -341,9 +315,7 @@ const Navbar: FC<navbarprops> = () => {
                       <div className="flex flex-col text-left py-2 px-4 gap-1 mt-auto ">
                         <button
                           className="border bg-black rounded py-2 text-white flex items-center justify-center gap-5 "
-                          onClick={() => {
-                            signIn("github");
-                          }}
+                          
                         >
                           <SiGithub className="text-2xl rounded " /> Sign in
                           with Github
